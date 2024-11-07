@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAPORAN WO</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>REPORT WORK ORDER</h1>
+    <form id="formLaporan">
+      <label for="woInput">Masukkan WO:</label>
+      <textarea id="woInput" rows="4" cols="50" placeholder="Tempelkan WO yang Anda terima di sini..."></textarea><br>
+
+      <label for="odpReal">ODP REAL:</label>
+      <input type="text" id="odpReal" placeholder="Contoh: FZ/04" /><br>
+
+      <label for="port">PORT:</label>
+      <input type="number" id="port" /><br>
+
+      <label for="qr">QR:</label>
+      <input type="text" id="qr" /><br>
+
+      <label for="idValins">ID VALINS:</label>
+      <input type="number" id="idValins" /><br>
+
+      <label for="snOnt">SN ONT:</label>
+      <input type="text" id="snOnt" /><br>
+
+      <label for="stbId">STB ID:</label>
+      <input type="number" id="stbId" /><br>
+
+      <label for="dc">DC:</label>
+      <input type="number" id="dc" /><br>
+
+      <label for="ketLapangan">KET LAPANGAN:</label>
+      <select id="ketLapangan">
+        <option value="OK TARIK">OK TARIK</option>
+        <option value="Manual">Manual</option>
+      </select><br>
+
+      <label for="ketLapanganManual">Isi Jika Manual,:</label>
+      <input type="text" id="ketLapanganManual" disabled /><br>
+
+      <label for="tikorRumah">TIKOR RUMAH:</label>
+      <input type="text" id="tikorRumah" /><br>
+
+      <label for="tikorOdp">TIKOR ODP:</label>
+      <input type="text" id="tikorOdp" /><br>
+
+      <button type="button" onclick="generateReport()">Generate Laporan</button>
+    </form>
+
+    <div id="hasilLaporan" class="hasilLaporan">
+      <h3>Hasil Laporan:</h3>
+      <pre id="laporanOutput"></pre>
+      <!-- Tombol untuk menyalin laporan -->
+      <button type="button" id="salinLaporan">Salin Laporan</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
